@@ -35,7 +35,13 @@ export const Login = () => {
       updateStoreData(dispatch,'LOGIN',true)
     
    } else{
-      alert("please check entered uid or pwd")
+      
+      updateStoreData(dispatch, 'TOASTER',{
+        isShowToaster: true,
+        toasterMsg: 'Check entered uid or pwd',
+        color: 'red'
+      })    
+      
    }
 
   }catch(ex){
