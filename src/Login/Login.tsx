@@ -6,6 +6,7 @@ import axios from 'axios'
 import { handleFieldLevelValidation,handleFormLevelValidation } from '@/app/common/components/services/validations'
 import Ajax from '@/app/common/components/services/ajax'
 import { updateStoreData } from '@/app/common/components/services/functions'
+import { AppCookies } from '@/app/common/components/services/cookies'
 
 export const Login = () => {
 
@@ -33,6 +34,9 @@ export const Login = () => {
 
     if(res?.data?.length>0){
       updateStoreData(dispatch,'LOGIN',true)
+      const {_id, uid} = res?.data?.[0] || {}
+      AppCookies.setCookie("id",_id,10)
+      AppCookies.setCookie("uid",uid,10)
     
    } else{
       

@@ -1,5 +1,7 @@
+import { AppCookies } from "@/app/common/components/services/cookies";
+
 export const init = {
-  isLoggedIn: false,
+  isLoggedIn: AppCookies.isUserLoggedIn(),
   isShowLoader: false,
   toaster:{
     isShowToaster: false,
