@@ -1,0 +1,50 @@
+
+<style>
+  div{
+    border:1px solid red;
+    padding:40px;
+  }
+</style>
+
+<!--event bubbling
+<script>
+  function f1(){
+      alert('f1')
+  }
+  function f2(){
+    alert('f2')
+  }
+  function f3(eve){
+    eve.stopPropagation()
+    alert('f3')
+  }
+</script>
+
+<div onclick="f1()">
+  <div onclick="f2()">
+    <div onclick="f3(event)">
+
+    </div>
+  </div>
+</div> -->
+
+<!--event capturing-->
+
+<div id="div1">
+  <div id="div2">
+    <div id="div3">
+
+    </div>
+  </div>
+</div>
+
+<script>
+      const divs=document.getElementsByTagName('div')
+      for(let i=0;i<divs.length;i++)
+      {
+        divs[i].addEventListener('click', function(){
+            alert(this.id)
+        },false)
+      }
+</script>
+

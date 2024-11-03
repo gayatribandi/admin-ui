@@ -1,0 +1,77 @@
+[
+
+  {
+    "lbl":"User ID",
+    "lblCols":"12",
+    "name":"uid",
+    "type":"text",
+    "tag":"input",
+    "errMsgCols":"12",
+    "isRequired": true,
+    "errorMsg":"",
+    "inputCols":"12",
+    "hasError": false,
+    "value": "",
+    "criteria":[
+      "REQUIRED",
+      "EMAIL"
+    ]
+   
+  },
+  {
+    "lbl":"Password",
+    "lblCols":"12",
+    "name":"pwd",
+    "type":"text",
+    "tag":"input",
+    "errMsgCols":"12",
+    "isRequired": true,
+    "errorMsg":"",
+    "inputCols":"12",
+    "hasError": false,
+    "value": "",
+    "criteria":[
+      "REQUIRED",
+      "MIN5CHAR"
+    ]
+   
+  },
+  {
+    "lbl":"Phone",
+    "lblCols":"12",
+    "name":"phone",
+    "type":"number",
+    "tag":"input",
+    "errMsgCols":"12",
+    "isRequired": true,
+    "errorMsg":"",
+    "inputCols":"12",
+    "hasError": false,
+    "value": "",
+    "criteria":[
+      "REQUIRED",
+      "PHONE"
+    ]
+
+  },
+  {
+    "lbl":"Address",
+    "lblCols":"12",
+    "name":"address",
+    "type":"text",
+    "tag":"textarea",
+    "errMsgCols":"12",
+    "isRequired": true,
+    "errorMsg":"",
+    "inputCols":"12",
+    "hasError": false,
+    "value": "",
+    "criteria":[
+      "REQUIRED"
+      
+    ]
+
+  }
+  
+  
+  ]
